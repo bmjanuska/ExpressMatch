@@ -10,7 +10,7 @@ var path = require("path");
 // Set up Exress app
 //======================================================
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Set up Exress app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,4 +20,18 @@ app.use(bodyParser.json());
 // People Data ??? where we have all of our attractive candidates...
 //======================================================
 
+//======================================================
+
+// Router
+//======================================================
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+
+//======================================================
+
+// Listener
+//======================================================
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
 //======================================================
