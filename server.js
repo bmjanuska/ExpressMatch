@@ -12,6 +12,9 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+//setting up static directory
+app.use(express.static('app/public'))
+
 // Set up Exress app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
