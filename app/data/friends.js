@@ -1,6 +1,6 @@
 var friendList = [
   {
-    name:"A",
+    name:"Frank",
     photo:"#",
     scores:[
       5,
@@ -16,7 +16,7 @@ var friendList = [
     ]
   },
   {
-    name:"B",
+    name:"Josh",
     photo:"#",
     scores:[
       2,
