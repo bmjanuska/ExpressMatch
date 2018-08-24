@@ -26,8 +26,6 @@ $(".submit").on("click", function (){
     console.log(data);
   });
 
-  //make modal here
-  // $("#").modal();
 
 });
 //======================================================

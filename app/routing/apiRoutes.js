@@ -5,23 +5,24 @@
 var friends = require("../data/friends");
 
 module.exports = function(app) {
+
   // Friends JSON shows up on 3000/api/friends
   app.get("/api/friends", function(req, res) {
+    // console.log("this is the route working!")
     res.json(friends);
   });
 
   // Recieving new information from user input and adding it to our JSON of friends
   app.post("/api/friends", function(req, res) {
     var newDate = req.body;
-    console.log(newDate);
+    console.log("This is new date" + newDate);
     friends.push(newDate);
     res.json(newDate);
   });
 
-  var friends = require("../data/friends");
-  module.exports = function(app){
 
     app.post("/api/friends", function(req, res){
+      console.log("api friends");
       var results = req.body.results;
       var resultsArray = [];
 
@@ -48,9 +49,9 @@ module.exports = function(app) {
         console.log(theMatch.name);
         console.log(theMatch.photo);
 
-        //get this information to pop up on /match
+        //get this information to pop up on "/match"
       }
     });
 
-  };
+
 };
