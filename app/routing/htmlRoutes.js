@@ -7,7 +7,7 @@ var path = require("path");
 //======================================================
 
 
-//Routing
+//Routing/ URL paths
 //======================================================
 module.exports = function(app){
 

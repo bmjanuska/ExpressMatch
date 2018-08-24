@@ -20,12 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //======================================================
 
-// People Data ??? where we have all of our attractive candidates...
-//======================================================
 
-//======================================================
-
-// Router
+// Router 
 //======================================================
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
