@@ -19,7 +19,11 @@ module.exports = function(app){
   app.get("/", function (req,res){
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
+
   //Route to results ( is this a modal in the end???)
+  app.get("/match", function (req,res){
+    res.sendFile(path.join(__dirname, "../public/match.html"));
+  });
 
 };
 //======================================================
